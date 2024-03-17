@@ -138,7 +138,7 @@ _openprovider_login() {
 	fi
 
 	_info "Retrieving access token"
-	login_data="{\"username\": \"$OPENPROVIDER_USER\", \"password\": \"$OPENPROVIDER_PASSWORDHASH\", \"ip\": \"0.0.0.0\"}"
+	login_data="{\"username\": \"$OPENPROVIDER_USER\", \"password\": \"$OPENPROVIDER_PASSWORD\", \"ip\": \"0.0.0.0\"}"
 	response="$(_post "$login_data" "$OPENPROVIDER_API/auth/login" "" "POST" "Content-Type: application/json")"
 	_debug response "$response"
 
