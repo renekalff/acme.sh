@@ -147,9 +147,9 @@ _openprovider_login() {
 		_debug token "$OPENPROVIDER_TOKEN"
 		export OPENPROVIDER_TOKEN
 
-	# save the username and password to the account conf file.
-	#_saveaccountconf_mutable OPENPROVIDER_USER "$OPENPROVIDER_USER"
-	#_saveaccountconf_mutable OPENPROVIDER_PASSWORD "$OPENPROVIDER_PASSWORD"
+		# save the username and password to the account conf file.
+		_saveaccountconf_mutable OPENPROVIDER_USER "$OPENPROVIDER_USER"
+		_saveaccountconf_mutable OPENPROVIDER_PASSWORD "$OPENPROVIDER_PASSWORD"
 	else
 		_err 'Could not get Openprovider access token; check your credentials'
 		return 1
